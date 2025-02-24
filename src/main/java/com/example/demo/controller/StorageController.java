@@ -131,6 +131,12 @@ public class StorageController {
     {
         storageService.UpdateOrderNum(orderChange.getPreOrder(),orderChange.getChangeNum());
     }
+    @PostMapping("/data/updateOrder")
+    void UpdateOrder(@RequestBody OrderChange orderChange)
+    {
+        storageService.UpdateOrderState(orderChange.getPreOrder(),orderChange.getChangeState());
+        storageService.UpdateOrderNum(orderChange.getPreOrder(),orderChange.getChangeNum());
+    }
     @PostMapping("/data/UpdatePurchaseState")
     void UpdatePurchaseState(@RequestBody PurchaseChange purchaseChange)
     {
@@ -139,6 +145,12 @@ public class StorageController {
     @PostMapping("/data/UpdatePurchaseNum")
     void UpdatePurchaseNum(@RequestBody PurchaseChange purchaseChange)
     {
+        storageService.UpdatePurchaseNum(purchaseChange.getPrepurchase(),purchaseChange.getChangeNum());
+    }
+    @PostMapping("/data/UpdatePurchase")
+    void UpdatePurchase(@RequestBody PurchaseChange purchaseChange)
+    {
+        storageService.UpdatePurchaseState(purchaseChange.getPrepurchase(), purchaseChange.getChangeState());
         storageService.UpdatePurchaseNum(purchaseChange.getPrepurchase(),purchaseChange.getChangeNum());
     }
     @PostMapping("/data/UpdateProductionState")
@@ -151,5 +163,10 @@ public class StorageController {
     {
         storageService.UpdateProductionNum(productionChange.getPreproduction(), productionChange.getChangeCostNum(), productionChange.getChageProductNum());
     }
-
+    @PostMapping("/data/UpdateProduction")
+    void  UpdateProduction(@RequestBody ProductionChange productionChange)
+    {
+        storageService.UpdateProductionState(productionChange.getPreproduction(), productionChange.getChangeState());
+        storageService.UpdateProductionNum(productionChange.getPreproduction(), productionChange.getChangeCostNum(), productionChange.getChageProductNum());
+    }
 }

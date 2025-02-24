@@ -4,8 +4,8 @@ import com.example.demo.entity.order;
 
 public class OrderChange {
     private order preOrder;
-    private int ChangeNum;
-    private String ChangeState;
+    private int changeNum;
+    private String changeState;
 
     public order getPreOrder() {
         return preOrder;
@@ -16,24 +16,33 @@ public class OrderChange {
     }
 
     public int getChangeNum() {
-        return ChangeNum;
+        return changeNum;
     }
 
     public void setChangeNum(int changeNum) {
-        ChangeNum = changeNum;
+        this.changeNum = changeNum;
     }
 
     public String getChangeState() {
-        return ChangeState;
+        return changeState;
     }
 
     public void setChangeState(String changeState) {
-        ChangeState = changeState;
+        this.changeState = changeState;
     }
 
     public OrderChange(order preOrder, int changeNum, String changeState) {
         this.preOrder = preOrder;
-        ChangeNum = changeNum;
-        ChangeState = changeState;
+        this.changeNum = changeNum;
+        this.changeState = changeState;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderChange{" +
+                "preOrder=" + preOrder +
+                ", changeNum=" + changeNum +
+                ", changeState='" + changeState + '\'' +
+                '}';
     }
 }

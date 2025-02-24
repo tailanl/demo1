@@ -13,7 +13,7 @@ public class ProductionChange {
     }
 
     public void setPreproduction(production preproduction) {
-        Preproduction = preproduction;
+        this.Preproduction = preproduction;
     }
 
     public String getChangeState() {
@@ -21,7 +21,7 @@ public class ProductionChange {
     }
 
     public void setChangeState(String changeState) {
-        ChangeState = changeState;
+        this.ChangeState = changeState;
     }
 
     public int getChangeCostNum() {
@@ -29,7 +29,7 @@ public class ProductionChange {
     }
 
     public void setChangeCostNum(int changeCostNum) {
-        ChangeCostNum = changeCostNum;
+        this.ChangeCostNum = changeCostNum;
     }
 
     public int getChageProductNum() {
@@ -37,13 +37,13 @@ public class ProductionChange {
     }
 
     public void setChageProductNum(int chageProductNum) {
-        ChageProductNum = chageProductNum;
+        this.ChageProductNum = chageProductNum;
     }
 
     public ProductionChange(production preproduction, String changeState, int changeCostNum, int chageProductNum) {
-        Preproduction = preproduction;
-        ChangeState = changeState;
-        ChangeCostNum = changeCostNum;
-        ChageProductNum = chageProductNum;
+        this.Preproduction = preproduction;
+        this.ChangeState = changeState;
+        this.ChangeCostNum = changeCostNum;
+        this.ChageProductNum = chageProductNum;
     }
 }

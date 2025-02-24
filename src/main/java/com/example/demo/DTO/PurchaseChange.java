@@ -12,7 +12,7 @@ public class PurchaseChange {
     }
 
     public void setPrepurchase(purchase prepurchase) {
-        Prepurchase = prepurchase;
+        this.Prepurchase = prepurchase;
     }
 
     public int getChangeNum() {
@@ -20,7 +20,7 @@ public class PurchaseChange {
     }
 
     public void setChangeNum(int changeNum) {
-        ChangeNum = changeNum;
+        this.ChangeNum = changeNum;
     }
 
     public String getChangeState() {
@@ -28,12 +28,12 @@ public class PurchaseChange {
     }
 
     public void setChangeState(String changeState) {
-        ChangeState = changeState;
+        this.ChangeState = changeState;
     }
 
     public PurchaseChange(purchase prepurchase, int changeNum, String changeState) {
-        Prepurchase = prepurchase;
-        ChangeNum = changeNum;
-        ChangeState = changeState;
+        this.Prepurchase = prepurchase;
+        this.ChangeNum = changeNum;
+        this.ChangeState = changeState;
     }
 }
